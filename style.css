@@ -1,29 +1,61 @@
-body {
+
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-size: 20px;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #00949b 0%,
+        #75cedc 100%
+    );
 }
 
 .header-slike {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     gap: 20px; 
-    padding: 20px;
+    padding: 30px;
     background: #f2f2f2;
+}
+
+.iznadslika{
+   padding-left: 20px;
+   font-size: 18px;
+   font-weight: 500;
+   color: #000000;
+   background-color: #f2f2f2;
+   padding: 30px 20px 30px 20px; /*gore-desno-dolje-lijevo */
 }
 
 .main-nav{
     background-color: #f2f2f2;
-    padding: 20px 40px 10px 40px;
+    padding: 20px 20px 10px 20px;
     margin:auto;
     border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
+
  ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px; 
-    padding: 0;}
+    padding: 0;
+    justify-content: right;}
+
+ .navnaslov {
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 500;
+    color: #4a9469;
+    white-space: nowrap;
+    margin-right: auto;
+   }
+
   a {
     text-decoration: none;
     color: #000000;
@@ -34,15 +66,13 @@ body {
     &:hover {background-color: #babbbe;}
  }}
 
-.container {
+ .container {
     max-width: auto;  
     margin: 0 auto;     
     padding: 0 20px;    
-    background-color: #ffffff; 
-}
+ }
 
-.footer {
-    background: #f2f2f2;
+ .footer {
     padding: 20px 40px 0 40px;
     border-top: 2px solid #ddd;
     flex-wrap: wrap;
@@ -100,20 +130,21 @@ body {
  .slike-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
+    gap: 20px;
     justify-items: center;
     align-items: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size:25px;
+    color: #ffffff;
 
  .glslike {
     img {
-        width: 450px;
-        height: 350px;
+        width: 500px;
+        height: 550px;
         border: 1px solid #000;   
         border-radius: 5px;       
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        &:hover {transform: scale(1.05); box-shadow: 10px 10px 10px 10px rgba(15, 182, 168, 0.2);}
+        &:hover {transform: scale(1.05); box-shadow: 10px 10px 10px 10px rgba(190, 159, 19, 0.2);}
         }}
     }
 }
