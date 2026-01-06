@@ -1,4 +1,3 @@
-
 html, body {
     margin: 0;
     padding: 0;
@@ -19,155 +18,182 @@ body {
     display: flex;
     justify-content: left;
     align-items: left;
-    gap: 20px; 
+    gap: 20px;
     padding: 30px;
     background: #f2f2f2;
 }
 
-.iznadslika{
-   padding-left: 20px;
-   font-size: 18px;
-   font-weight: 500;
-   color: #000000;
-   background-color: #f2f2f2;
-   padding: 30px 20px 30px 20px; /*gore-desno-dolje-lijevo */
+.iznadslika {
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #f2f2f2;
+    padding: 30px 20px 30px 20px;
 }
 
-.main-nav{
+/* NAV */
+
+.main-nav {
     background-color: #f2f2f2;
     padding: 20px 20px 10px 20px;
-    margin:auto;
+    margin: auto;
     border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
+}
 
- ul {
+.main-nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; 
+    gap: 20px;
     padding: 0;
     justify-content: right;
     flex-wrap: wrap;
-   }
+}
 
- .navnaslov {
+.main-nav .navnaslov {
     font-style: italic;
     font-size: 25px;
     font-weight: 500;
     color: #4a9469;
     white-space: nowrap;
     margin-right: auto;
-   }
+}
 
-  a {
+.main-nav a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 5px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    &:hover {background-color: #babbbe;}
- }}
+}
+
+.main-nav a:hover {
+    background-color: #babbbe;
+}
 
 @media (max-width: 768px) {
-        ul {
-            flex-direction: column;
-            align-items: flex-start; 
-        }
-
-        a {
-            width: 100%;
-        }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
- .container {
-    max-width: auto;  
-    margin: 0 auto;     
-    padding: 0 20px;    
- }
+    .main-nav a {
+        width: 100%;
+    }
+}
 
- .footer {
+/* CONTAINER */
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* FOOTER */
+
+.footer {
     padding: 20px 40px 0 40px;
     border-top: 2px solid #1157722a;
     flex-wrap: wrap;
+}
 
- .footersadrzaj{
+.footer .footersadrzaj {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
- .footerlijevo {
+.footer .footerlijevo {
     display: flex;
-    gap: 15px;  
-    img {
-        height: 160px;
-        width: 120px;
-        object-fit: contain;
-        border-radius: 5px;
-        }}
+    gap: 15px;
+}
 
- .footerdesno {
+.footer .footerlijevo img {
+    height: 160px;
+    width: 120px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.footer .footerdesno {
     display: flex;
     gap: 30px;
-    flex-direction: column;   
-    margin-right:20px;
-    a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        transition: color 0.2s;
-        &:hover {color: #115772;}
-    }}
- }
+    flex-direction: column;
+    margin-right: 20px;
+}
 
- .footerispod {
+.footer .footerdesno a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer .footerdesno a:hover {
+    color: #115772;
+}
+
+.footer .footerispod {
     margin-top: 15px;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
     color: #000000;
     border-top: 1px solid #1157722a;
-    }
- }
+}
 
- .div-slike{
-    display: flex;             
-    justify-content: center;  
-    align-items: center;       
+/* SLIKE */
+
+.div-slike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
- }
+}
 
- .glavne-slike {
+.glavne-slike {
     padding: 50px 0;
     text-align: center;
-    
-  .slike-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        gap: 30px;
-        justify-items: center;
+}
 
-  .glslike {
-        width: 500px;
+.glavne-slike .slike-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
 
-      img {
-         width: 100%;
-         height: auto;
-         display: block;    
-         border: 1px solid #000;
-         border-radius: 5px;
-         transition: transform 0.2s ease, box-shadow 0.2s ease;
-         &:hover { transform: scale(1.05);  box-shadow: 10px 10px 20px rgba(190, 159, 19, 0.2);}
-        }
-       p {
-         margin-top:12px;
-         font-size: 22px;
-         font-weight: bold;
-         color: #fff;
-         text-align:center;
-        }
-   }
-  }
- }
+.glavne-slike .glslike {
+    width: 500px;
+}
+
+.glavne-slike .glslike img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glavne-slike .glslike img:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(190, 159, 19, 0.2);
+}
+
+.glavne-slike .glslike p {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+/* BURGER */
+
 .burger {
     display: none;
     flex-direction: column;
@@ -189,27 +215,26 @@ body {
         background: #f2f2f2;
         padding: 10px 0;
     }
+
     .main-nav ul li:not(.navnaslov) {
         display: none;
     }
+
     .main-nav ul.active li {
         display: block;
     }
+
     .navnaslov {
         display: block;
         margin-bottom: 10px;
     }
+
     .burger {
         display: flex;
         margin-top: 10px;
     }
+
     .main-nav ul a {
         width: 100%;
     }
 }
-
-
-
-
-
-
