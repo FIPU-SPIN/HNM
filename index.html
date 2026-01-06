@@ -29,7 +29,7 @@
             <li><a href="#sva-4-ponavljam">Sva 4 ponavljam</a></li>
             <li><a href="#glagoli-u-mrezi">Glagoli u mreži</a></li>
         </ul>
-        
+   
     <div class="burger">
         <span></span>
         <span></span>
@@ -79,3 +79,13 @@
 </body>
 
 </html>
+
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.main-nav ul');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+</script>
