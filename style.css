@@ -84,6 +84,30 @@ body {
     }
 }
 
+/* BREADCRUMBS */
+
+.breadcrumbs {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #00949b;
+    font-weight: 600;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+
 /* CONTAINER */
 
 .container {
@@ -168,6 +192,7 @@ body {
 
 .glavne-slike .glslike {
     width: 500px;
+    
 }
 
 .glavne-slike .glslike img {
