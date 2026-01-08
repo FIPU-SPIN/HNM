@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bodypocetna">
 
 <header>
         <header class="header-slike">
@@ -80,4 +80,11 @@
 
 </html>
 
-<script src="script.js"></script>
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.main-nav ul');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>

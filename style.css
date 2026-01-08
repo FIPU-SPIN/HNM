@@ -4,13 +4,23 @@ html, body {
     min-height: 100%;
 }
 
-body {
+.bodypocetna {
     font-size: 20px;
     min-height: 100vh;
     background: linear-gradient(
         to bottom,
         #00949b 0%,
         #75cedc 100%
+    );
+}
+
+.bodydruga {
+    font-size: 20px;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #a5a206 0%,
+        #a5aa59 100%
     );
 }
 
@@ -197,9 +207,10 @@ body {
 
 .glavne-slike .glslike img {
     width: 100%;
+    aspect-ratio: 4 / 3;  
     height: auto;
     display: block;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -216,6 +227,39 @@ body {
     color: #fff;
     text-align: center;
 }
+
+/* SLIKE2 – ŠTO SVE ZNAM */
+
+.glavne-slike .slike2 {
+    width: 500px;
+}
+
+.glavne-slike .slike2 img {
+    width: 100%;
+    aspect-ratio: 4 / 3;     
+    object-fit: contain;     
+    background-color: #fff; 
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glavne-slike .slike2 p {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.glavne-slike .slike2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(190, 159, 19, 0.2);
+}
+
 
 /* BURGER */
 
