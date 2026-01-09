@@ -24,13 +24,32 @@ html, body {
     );
 }
 
+.header-slike img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 .header-slike {
     display: flex;
-    justify-content: left;
-    align-items: left;
-    gap: 20px;
-    padding: 30px;
-    background: #f2f2f2;
+    flex-direction: row;  
+    align-items: center;
+    padding:10px;
+    gap: 10px;
+    background-color: white;
+}
+
+.header-slike a {
+    width: 150px;
+    height: 90px;
+    display: flex;
+    flex-shrink: 0px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .iznadslika {
@@ -38,14 +57,27 @@ html, body {
     font-size: 18px;
     font-weight: 500;
     color: #000000;
-    background-color: #f2f2f2;
     padding: 30px 20px 30px 20px;
 }
 
-/* NAV */
+/* NAV */ 
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-linkovi{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 .main-nav {
-    background-color: #f2f2f2;
+    background-color: white;
     padding: 20px 20px 10px 20px;
     margin: auto;
     border-top: 2px solid #ddd;
@@ -68,6 +100,7 @@ html, body {
     color: #4a9469;
     white-space: nowrap;
     margin-right: auto;
+    background-color: white;
 }
 
 .main-nav a {
@@ -101,11 +134,12 @@ html, body {
     padding: 10px 20px;
     font-size: 16px;
     color: #555;
+    border-bottom: #f2f2f2 2px solid;
 }
 
 .breadcrumbs a {
     text-decoration: none;
-    color: #00949b;
+    color: #000000;
     font-weight: 600;
 }
 
@@ -115,15 +149,6 @@ html, body {
 
 .breadcrumbs span {
     margin: 0 5px;
-}
-
-
-/* CONTAINER */
-
-.container {
-    max-width: auto;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* FOOTER */
@@ -180,6 +205,12 @@ html, body {
 }
 
 /* SLIKE */
+
+.okvirslike {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 .div-slike {
     display: flex;
@@ -266,44 +297,46 @@ html, body {
 .burger {
     display: none;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     cursor: pointer;
 }
 
 .burger span {
-    width: 25px;
+    width: 20px;
     height: 3px;
     background-color: #000;
     display: block;
 }
 
 @media (max-width: 1400px) {
-    .main-nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        background: #f2f2f2;
-        padding: 10px 0;
-    }
 
-    .main-nav ul li:not(.navnaslov) {
-        display: none;
-    }
-
-    .main-nav ul.active li {
-        display: block;
-    }
-
-    .navnaslov {
-        display: block;
-        margin-bottom: 10px;
+    .nav-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .burger {
         display: flex;
+        order: 2;
+    }
+
+    .navnaslov {
+        order: 1;
+    }
+
+    .main-nav ul {
+        display: none;
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        background: #fff;
+        padding: 10px 0;
         margin-top: 10px;
     }
 
-    .main-nav ul a {
-        width: 100%;
+    .main-nav ul.active {
+        display: flex;
     }
 }
