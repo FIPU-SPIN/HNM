@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naglasci.unipu.hr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bodyoprojektu">
+
+<header>
+    <header class="header-slike">
+        <a href="#"><img src="assets/images/kisa.png" alt="slika 1"></a>
+        <a href="#"><img src="assets/images/sunce.png" alt="slika 2"></a>
+        <a href="#"><img src="assets/images/trava.png" alt="slika 3"></a>
+        <a href="#"><img src="assets/images/rosa.png" alt="slika 4"></a>
+    </header>
+</header>
+
+<nav class="main-nav">
+    <div class="nav-row">
+        <span class="navnaslov">Hrvatski naglasci na mreži</span>
+
+        <ul>
+            <li><a href="pocetna.html">O projektu</a></li>
+            <li><a href="stosveznam.html">Što sve znam?</a></li>
+            <li><a href="slusam.html">Slušam</a></li>
+            <li><a href="izgovaram.html">Izgovaram</a></li>
+            <li><a href="sva4ponavljam.html">Sva 4 ponavljam</a></li>
+            <li><a href="glagoli.html">Glagoli u mreži</a></li>
+        </ul>
+
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<nav class="breadcrumbs">
+    <a href="index.html">O projektu</a>
+    <span>/</span>
+    <span></span> </nav>
+
+<main>
+    <div class="iznadslika">Projekt Hrvatski naglasci na mreži (HNM) okuplja interdisciplinarni tim stručnjaka iz kroatistike, fonetike, računarstva, elektrotehnike i informatike. 
+        Usmjeren je na razvoj inovativnih digitalnih alata za učenje i poučavanje hrvatskih standardnih naglasaka. 
+        Ciljevi su projekta: mrežne aplikacije za uvježbavanje i testiranje percepcije i produkcije hrvatskih naglasaka 
+        (standardnojezičnih i udarnoga te regiolekata), zatim nadogradnja aplikacije automatskim anotiranjem mjesta naglasak te 
+        na koncu izrada ozvučenoga repozitorija glagola kao temelja budućega mrežnoga ozvučenog rječnika. 
+        
+        Alati za uvježbavanje percepcije i produkcije naglasaka omogućuju stjecanje vještina koje su nužne za služenje ozvučenim rječnikom te su, 
+        stoga, preduvjet ozvučivanju hrvatske leksičke građe, smještene u komunikacijski kontekst i ovjerene govornim korpusima. 
+        
+        Istraživački dio obuhvaća prikupljanje i akustičku obradu govornoga korpusa (arhetipski spikerski izgovor i regiolekti) te definiranje 
+        arhetipskih izgovora naglasaka, nakon akustičkih analiza (tona i trajanja). Zatim slijedi analiza korpusa glagola, 
+        svrstavanje u naglasne tipove i podtipove, analiza hiperkorekcija (na temelju korpusa parlamentaraca) i automatskih anotacija mjesta 
+        naglasaka. Tim Fakulteta informatike u Puli, zajedno s vanjskim suradnicima s Instituta u Ljubljani, razvija mrežne aplikacije, 
+        implementira akustičke analize, obrađuje izgovor naglasaka i digitalnu infrastrukturu (cloud rješenja, primjena velikih jezičnih modela 
+        i govornih transformera). 
+        
+        Projekt će omogućiti razvoj novih obrazovnih alata, mrežnih izvora za hrvatski jezik te znanstveni doprinos hrvatskoj akcentologiji, 
+        fonetici i metodici poučavanja hrvatskih naglasaka. Također, pridonijet će digitalnoj tranziciji i povećanju međunarodne vidljivosti 
+        Sveučilišta Jurja Dobrile u Puli.
+    </div> <div class="okvirslike">
+        <section class="glavne-slike">
+            <div class="slike-grid">
+                <div class="slike2">
+                    <div class="tekst-kartica">
+                        <p>
+                            Glavni cilj projekta je osigurati znanstveni doprinos hrvatskoj akcentologiji, 
+                            fonetici i metodici poučavanja hrvatskih naglasaka. Kroz digitalnu 
+                            infrastrukturu i primjenu suvremenih modela, želimo omogućiti lakše 
+                            učenje i prepoznavanje naglasnih sustava.
+                        </p>
+                    </div>
+                    <p>Ciljevi</p>
+                </div>
+                <div class="slike2">
+                    <img src="assets/images/Rezultati.png" alt="rezultati">
+                    <p>Rezultati</p>
+                </div>
+                <div class="slike2">
+                    <img src="assets/images/Tim.png" alt="tim">
+                    <p>Tim</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+    <div class="footersadrzaj">
+        <div class="footerlijevo">
+            <img src="assets/images/knjiga1.png" alt="KSTR">
+        </div>
+
+        <div class="footerdesno">
+            <a href="#">poveznica1</a>
+            <a href="#">poveznica2</a>
+        </div>
+    </div>
+
+    <div class="footerispod">
+        ©2025 Sva prava pridržana.
+    </div>
+</footer>
+
+</body>
+
+</html>
+
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.main-nav ul');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>
