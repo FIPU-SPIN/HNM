@@ -275,12 +275,12 @@ html, body {
 
 .glavne-slike .glslike img:hover {
     transform: scale(1.05);
-    box-shadow: 10px 10px 20px rgba(190, 159, 19, 0.2);
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .glavne-slike .glslike p {
     margin-top: 12px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
     text-align: center;
