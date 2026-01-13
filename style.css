@@ -24,6 +24,16 @@ html, body {
     );
 }
 
+.bodyslusam {
+    font-size: 20px;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #e490cf 0%,
+        #ddb2d2  100%
+    );
+}
+
 .bodyoprojektu{
     font-size: 20px;
     min-height: 100vh;
@@ -33,6 +43,7 @@ html, body {
         #4e8ecd 100%
     );
 }
+
 .header-slike img {
     width: 100%;
     height: 100%;

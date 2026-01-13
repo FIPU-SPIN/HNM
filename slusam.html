@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naglasnik.unipu.hr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bodyslusam">
+
+<header>
+        <header class="header-slike">
+            <a href="#"><img src="assets/images/kisa.png" alt="slika 1"></a>
+            <a href="#"><img src="assets/images/sunce.png" alt="slika 2"></a>
+            <a href="#"><img src="assets/images/trava.png" alt="slika 3"></a>
+            <a href="#"><img src="assets/images/rosa.png" alt="slika 4"></a>
+        </header>
+
+</header>
+    <nav class="main-nav">
+
+    <div class="nav-row">
+        <span class="navnaslov"><a href="pocetna.html">Hrvatski naglasci na mreži</a></span>
+
+        <ul>
+            <li><a href="oprojektu.html">O projektu</a></li>
+            <li><a href="stosveznam.html">Što sve znam?</a></li>
+            <li><a href="slusam.html">Slušam</a></li>
+            <li><a href="izgovaram.html">Izgovaram</a></li>
+            <li><a href="sva4ponavljam.html">Sva 4 ponavljam</a></li>
+            <li><a href="glagoli.html">Glagoli u mreži</a></li>
+        </ul>
+
+        <div class="burger">s
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+</nav>
+
+    <nav class="breadcrumbs">
+    <a href="pocetna.html">Početna</a>
+    <span>/</span>
+    <span>Slušam</span>
+    </nav>
+
+
+<main>
+    <div class="iznadslika">Treća recenica</div>
+    <div class="okvirslike">
+    <section class="glavne-slike">
+        <div class="slike-grid">
+            <div class="slike2"><img src="assets/images/mjesto.png" alt="govor"><p>Mjesto, ton i trajanje</p></div>
+            <div class="slike2"><img src="assets/images/zanaglasna.png" alt="koji"><p>Naglasci i zanaglasna dužina</p></div>
+            <div class="slike2"><img src="assets/images/uporaba.png" alt="koji"><p>Naglasci u uporabi</p></div>
+
+        </div>
+    </section>
+    </div>
+
+</main>
+
+    <script src="script.js"></script>
+
+
+<footer class="footer">
+    <div class="footersadrzaj">
+        <div class="footerlijevo">
+            <img src="assets/images/knjiga1.png" alt="KSTR">
+            <img src="assets/images/knjiga2.png" alt="KSTR">
+        </div>
+
+        <div class="footerdesno">
+            <a href="#">poveznica1</a>
+            <a href="#">poveznica2</a>
+        </div>
+
+    </div>
+
+    <div class="footerispod">
+        ©2025 Sva prava pridržana.
+    </div>
+</footer>
+
+</body>
+
+</html>
+
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.main-nav ul');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>
