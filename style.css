@@ -40,6 +40,9 @@ html, body {
     display: block;
 }
 
+.main-nav a.active {
+    font-weight: bold;
+}
 
 .header-slike {
     display: flex;
