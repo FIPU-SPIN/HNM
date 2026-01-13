@@ -105,7 +105,7 @@ html, body {
     flex-wrap: wrap;
 }
 
-.main-nav .navnaslov {
+.main-nav .navnaslov a{
     font-style: italic;
     font-size: 25px;
     font-weight: 500;
@@ -113,6 +113,10 @@ html, body {
     white-space: nowrap;
     margin-right: auto;
     background-color: white;
+}
+
+.main-nav .navnaslov a:hover {
+    background-color:white;
 }
 
 .main-nav a {
