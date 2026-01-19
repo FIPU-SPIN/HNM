@@ -22,12 +22,19 @@
         <span class="navnaslov"><a href="pocetna.html">Hrvatski naglasci na mreži</a></span>
 
         <ul>
-            <li><a href="oprojektu.html"class="active">O projektu</a></li>
-            <li><a href="stosveznam.html"class="active">Što sve znam?</a></li>
-            <li><a href="slusam.html"class="active">Slušam</a></li>
-            <li><a href="izgovaram.html"class="active">Izgovaram</a></li>
-            <li><a href="sva4ponavljam.html"class="active">Sva 4 ponavljam</a></li>
-            <li><a href="glagoli.html"class="active">Glagoli u mreži</a></li>
+            <li class="dropdown">
+                <a href="oprojektu.html">O projektu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="oprojektu_ciljevi.html">Ciljevi</a></li>
+                         <li><a href="oprojektu_rezultati.html">Rezultati</a></li>
+                        <li><a href="oprojektu_tim.html">Tim</a></li>
+        </ul>
+            </li>
+            <li><a href="stosveznam.html">Što sve znam?</a></li>
+            <li><a href="slusam.html">Slušam</a></li>
+            <li><a href="izgovaram.html">Izgovaram</a></li>
+            <li><a href="sva4ponavljam.html">Sva 4 ponavljam</a></li>
+            <li><a href="glagoli.html">Glagoli u mreži</a></li>
         </ul>
 
         <div class="burger">
@@ -59,40 +66,69 @@
             </div>
         </div>
     </div> 
+<section class="oprojektu-tekst">
+    <p>
+        Projekt <strong>Hrvatski naglasci na mreži (HNM)</strong> okuplja interdisciplinarni tim
+        stručnjaka iz kroatistike, fonetike, računarstva, elektrotehnike i informatike. Usmjeren
+        je na razvoj inovativnih digitalnih alata za učenje i poučavanje hrvatskih standardnih
+        naglasaka.
+    </p>
 
-    <div class="okvirslike">
-        <section class="glavne-slike">
-            <div class="slike-grid" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px;">
-                
-                <div class="slike2" style="flex: 1; min-width: 280px; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                    <div class="tekst-kartica" style="padding: 25px; background: #f0f7ff; flex-grow: 1;">
-                        <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #334155;">
-                            <strong>Glavni cilj</strong> projekta je osigurati znanstveni doprinos hrvatskoj akcentologiji, 
-                            fonetici i metodici poučavanja. Kroz digitalnu infrastrukturu želimo omogućiti lakše učenje i prepoznavanje naglasnih sustava.
-                        </p>
-                    </div>
-                    <p style="text-align: center; font-weight: bold; padding: 10px; margin: 0; background: #fff;">Ciljevi</p>
-                </div>
+    <p>
+        Ciljevi su projekta: mrežne aplikacije za uvježbavanje i testiranje percepcije i
+        produkcije hrvatskih naglasaka (standardnojezičnih i udarnoga te regiolekata), zatim
+        nadogradnja aplikacije automatskim anotiranjem mjesta naglasaka te na koncu izrada
+        ozvučenoga repozitorija glagola kao temelja budućega mrežnoga ozvučenog rječnika.
+    </p>
 
-                <div class="slike2" style="flex: 1; min-width: 280px; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden;">
-                    <div style="height: 180px; display: flex; align-items: center; justify-content: center; background: #fafafa;">
-                        <img src="assets/images/Rezultati.png" alt="rezultati" style="max-height: 100%; max-width: 100%; object-fit: contain;">
-                    </div>
-                    <p style="text-align: center; font-weight: bold; padding: 10px; margin: 0;">Rezultati</p>
-                </div>
+    <p>
+        Alati za uvježbavanje percepcije i produkcije naglasaka omogućuju stjecanje vještina
+        koje su nužne za služenje ozvučenim rječnikom te su, stoga, preduvjet ozvučivanju
+        hrvatske leksičke građe, smještene u komunikacijski kontekst i ovjerene govornim
+        korpusima.
+    </p>
 
-                <div class="slike2" style="flex: 1; min-width: 280px; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden;">
-                    <div style="height: 180px; display: flex; align-items: center; justify-content: center; background: #fafafa;">
-                        <img src="assets/images/Tim.png" alt="tim" style="max-height: 100%; max-width: 100%; object-fit: contain;">
-                    </div>
-                    <p style="text-align: center; font-weight: bold; padding: 10px; margin: 0;">Tim</p>
-                </div>
+    <p>
+        Istraživački dio obuhvaća prikupljanje i akustičku obradu govornoga korpusa (arhetipski
+        spikerski izgovor i regiolekti) te definiranje arhetipskih izgovora naglasaka, nakon
+        akustičkih analiza (tona i trajanja). Slijedi analiza korpusa glagola, svrstavanje u
+        naglasne tipove i podtipove, analiza hiperkorekcija (na temelju korpusa parlamentaraca)
+        i automatskih anotacija mjesta naglasaka.
+    </p>
 
-            </div>
-        </section>
-    </div>
+    <p>
+        Tim Fakulteta informatike u Puli, zajedno s vanjskim suradnicima s Instituta u Ljubljani,
+        razvija mrežne aplikacije, implementira akustičke analize, obrađuje izgovor naglasaka i
+        digitalnu infrastrukturu (cloud rješenja, primjena velikih jezičnih modela i govornih
+        transformera).
+    </p>
 
-    <div style="text-align: center; padding: 40px 20px; color: #64748b; font-style: italic;">
+    <p>
+        Projekt će omogućiti razvoj novih obrazovnih alata, mrežnih izvora za hrvatski jezik te
+        znanstveni doprinos hrvatskoj akcentologiji, fonetici i metodici poučavanja hrvatskih
+        naglasaka. Također, pridonijet će digitalnoj tranziciji i povećanju međunarodne
+        vidljivosti Sveučilišta Jurja Dobrile u Puli.
+    </p>
+</section>
+
+    <section class="tri-okvira">
+    <a href="oprojektu_ciljevi.html" class="okvir">
+        <img src="assets/images/ciljevi.png" alt="Ciljevi">
+        <h3>Ciljevi</h3>
+    </a>
+
+    <a href="oprojektu_rezultati.html" class="okvir">
+        <img src="assets/images/rezultati.png" alt="Rezultati">
+        <h3>Rezultati</h3>
+    </a>
+
+    <a href="oprojektu_tim.html" class="okvir">
+        <img src="assets/images/tim.png" alt="Tim">
+        <h3>Tim</h3>
+    </a>
+</section>
+
+    <div style="text-align: center; padding: 40px 20px; color: #000000; font-style: italic;">
         <p>Projekt pridonosi digitalnoj tranziciji i povećanju međunarodne vidljivosti Sveučilišta Jurja Dobrile u Puli.</p>
     </div>
 </main>
