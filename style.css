@@ -9,8 +9,8 @@ html, body {
     min-height: 100vh;
     background: linear-gradient(
         to bottom,
-        #00949b 0%,
-        #75cedc 100%
+        #00949b,
+        #75cedc
     );
 }
 
@@ -19,8 +19,8 @@ html, body {
     min-height: 100vh;
     background: linear-gradient(
         to bottom,
-        #dbad39 0%,
-        #b9a676 100%
+        #e0d2e7,
+        #e0d2e7a8
     );
 }
 
@@ -29,8 +29,8 @@ html, body {
     min-height: 100vh;
     background: linear-gradient(
         to bottom,
-        #e490cf 0%,
-        #ddb2d2  100%
+        #fbc5bc,
+        #fbc5bc9f
     );
 }
 
@@ -39,8 +39,8 @@ html, body {
     min-height: 100vh;
     background: linear-gradient(
         to bottom,
-        #6fc4ec 0%,
-        #4e8ecd 100%
+        #2cc7df,
+        #b6e2e9
     );
 }
 
