@@ -378,7 +378,7 @@ html, body {
 }
 
 .okvir {
-    background-color: #9cb4ec;
+    background-color: #6e94eb;
     border-radius: 12px;
     padding: 25px 20px;
     text-align: center;
@@ -400,7 +400,7 @@ html, body {
 
 .okvir:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(96, 137, 241, 0.15);
+    box-shadow: 0 10px 25px rgba(37, 91, 227, 0.15);
 }
 
 /* Padajući - O projektu */
@@ -413,7 +413,7 @@ html, body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #8fa5d8;
+    background-color: #84a3ec;
     list-style: none;
     padding: 10px 0;
     margin: 0;
@@ -451,7 +451,7 @@ html, body {
     max-width: 900px;
     margin: 80px auto;
     padding: 40px 30px;
-    background-color: #e0e4ed;
+    background-color: #2cc7df;
     border-radius: 12px;
     line-height: 1.8;
     font-size: 1.05rem;
