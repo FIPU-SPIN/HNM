@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naglasnik.unipu.hr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bodysva4">
+<header>
+<header class="header-slike">
+            <a href="#"><img src="assets/images/kisa.png" alt="slika 1"></a>
+            <a href="#"><img src="assets/images/sunce.png" alt="slika 2"></a>
+            <a href="#"><img src="assets/images/trava.png" alt="slika 3"></a>
+            <a href="#"><img src="assets/images/rosa.png" alt="slika 4"></a>
+</header>
+</header>
+
+    <nav class="main-nav">
+
+    <div class="nav-row">
+        <span class="navnaslov"><a href="pocetna.html">Hrvatski naglasci na mreži</a></span>
+
+        <ul>
+            <li class="dropdown">
+                <a href="oprojektu.html">O projektu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="oprojektu_ciljevi.html">Ciljevi</a></li>
+                         <li><a href="oprojektu_rezultati.html">Rezultati</a></li>
+                        <li><a href="oprojektu_tim.html">Tim</a></li>
+        </ul>
+            </li>
+            <li><a href="stosveznam.html">Što sve znam?</a></li>
+            <li><a href="slusam.html">Slušam</a></li>
+            <li><a href="izgovaram.html">Izgovaram</a></li>
+            <li><a href="sva4ponavljam.html">Sva 4 ponavljam</a></li>
+            <li><a href="glagoli.html">Glagoli u mreži</a></li>
+        </ul>
+
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+</nav>
+
+<nav class="breadcrumbs">
+    <a href="pocetna.html">Sva 4 ponavljam</a>
+    <span>/</span>
+    <span></span> </nav>
+
+<main>
+    <div class="iznadslika">Recenica</div>
+    <div class="okvirslike">
+    <section class="glavne-slike">
+        <div class="slike-grid">
+            <div class="glslike"><a href="oprojektu.html"><img src="assets/images/kisa.png" alt="Arena"></a><p>Kratkosilazni</p></div>
+            <div class="glslike"><a href="stosveznam.html"><img src="assets/images/sunce.png" alt="Ruka"></a><p>Dugosilazni</p></div>
+            <div class="glslike"><a href="slusam.html"><img src="assets/images/trava.png" alt="Miš"></a><p>Dugouzlazni</p></div>
+            <div class="glslike"><a href="izgovaram.html"><img src="assets/images/rosa.png" alt="Vrana"></a><p>Kratkouzlazni</p></div>
+            <div class="glslike"><a href="sva4ponavljam.html"><img src="assets/images/mjesec.png" alt="Naglasci"></a><p>Naglasci i zanaglasna dužina</p></div>
+        </div>
+    </section>
+    </div>
+
+</main>
+
+    <script src="script.js"></script>
+
+
+<footer class="footer">
+    <div class="footersadrzaj">
+        <div class="footerlijevo">
+            <img src="assets/images/knjiga1.png" alt="KSTR">
+            <img src="assets/images/knjiga2.png" alt="KSTR">
+        </div>
+
+        <div class="footerdesno">
+            <a href="#">poveznica1</a>
+            <a href="#">poveznica2</a>
+        </div>
+
+    </div>
+
+    <div class="footerispod">
+        ©2025 Sva prava pridržana.
+    </div>
+</footer>
+
+</body>
+
+</html>
+
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.main-nav ul');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>

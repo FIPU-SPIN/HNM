@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .bodypocetna {
@@ -11,6 +12,16 @@ html, body {
         to bottom,
         #00949b,
         #75cedc
+    );
+}
+
+.bodysva4 {
+    font-size: 20px;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #f8b66f,
+        #f7bb7b
     );
 }
 
