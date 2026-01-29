@@ -274,6 +274,11 @@ html, body {
     
 }
 
+.glavne-slike .sredina{
+    grid-column: 1 / -1;   
+    justify-self: center;
+}
+
 .glavne-slike .glslike img {
     width: 100%;
     aspect-ratio: 4 / 3;  
@@ -328,6 +333,12 @@ html, body {
     transform: scale(1.05);
     box-shadow: 10px 10px 20px rgba(190, 159, 19, 0.2);
 }
+
+.glavne-slike .slike2 .sredina{
+    grid-column: 1 / -1;   
+    justify-self: center;
+}
+
 
 
 /* BURGER */
