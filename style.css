@@ -1,13 +1,22 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    min-height:100vh;
+}
+
+main{
+    flex:1;
 }
 
 .bodypocetna {
     font-size: 20px;
-    min-height: 100vh;
     background: linear-gradient(
         to bottom,
         #00949b,
@@ -17,7 +26,6 @@ html, body {
 
 .bodysva4 {
     font-size: 20px;
-    min-height: 100vh;
     background: linear-gradient(
         to bottom,
         #f8b66f,
@@ -27,22 +35,28 @@ html, body {
 
 .bodydruga {
     font-size: 20px;
-    min-height: 100vh;
     background: linear-gradient(
         to bottom,
-        #e0d2e7,
-        #e0d2e7a8
+        #d3b4e2,
+        #d9bce7a8
     );
 }
 
 .bodyslusam {
     font-size: 20px;
-    min-height: 100vh;
     background: linear-gradient(
         to bottom,
         #fbc5bc,
         #fbc5bc9f
     );
+}
+
+.bodyslusam2 {
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    font-size: 20px;
+    background:#cec4c4;
 }
 
 .bodyoprojektu{
@@ -59,11 +73,7 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-}
-
-.main-nav a.active {
-    font-weight: bold;
+    display: flex;
 }
 
 .header-slike {
@@ -73,6 +83,8 @@ html, body {
     padding:10px;
     gap: 10px;
     background-color: white;
+    width: 100%;
+    align-self:stretch;
 }
 
 .header-slike a {
@@ -96,6 +108,11 @@ html, body {
 
 /* NAV */ 
 
+
+.main-nav a.active {
+    font-weight: bold;
+}
+
 .nav-row {
     display: flex;
     justify-content: space-between;
@@ -113,7 +130,7 @@ html, body {
 .main-nav {
     background-color: white;
     padding: 20px 20px 10px 20px;
-    margin: auto;
+    margin: 0;
     border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
 }
@@ -195,6 +212,8 @@ html, body {
     padding: 20px 40px 0 40px;
     border-top: 2px solid #1157722a;
     flex-wrap: wrap;
+    background-color: white;
+    margin-top:auto;
 }
 
 .footer .footersadrzaj {
@@ -499,3 +518,100 @@ html, body {
     margin-bottom: 22px;
     text-align: justify;
 }
+
+/*  KVIZ */
+
+.kviz {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#quiz{
+    display:none;
+    max-width: 500px;
+    min-height: 300px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.quiz-intro{
+    margin-top:40px;
+    text-align: center;
+}
+
+.quiz-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-quiz {
+  padding: 8px 16px;     
+  font-size: 15px;  
+  border-radius: 14px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  display: inline-block; 
+  margin-top: 15px;
+  width: 150px;
+}
+
+#start-quiz:hover {
+  background-color: #554eea;
+}
+
+#question {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+#answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#answers button {
+    padding: 14px 10px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#answers button:hover {
+    background: #eef3ff;
+    border-color: #6c8cff;
+}
+
+
