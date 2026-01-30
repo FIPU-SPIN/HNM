@@ -1,110 +1,148 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const questions = [
-  { word: "glava", answer: "kratkouzlazni" },
-  { word: "rȃk", answer: "dugosilazni" },
-  { word: "pìsati", answer: "kratkouzlazni" }
-];
+  const intro = document.getElementById("quiz-intro");
+  const readyScreen = document.getElementById("quiz-ready");
+  const quiz = document.getElementById("quiz");
 
-let currentQuestion = 0;
-let score = 0;
+  const startBtn = document.getElementById("start-quiz");
+  const beginBtn = document.getElementById("begin-quiz");
 
-let questionEl;
-let feedbackEl;
-let progressEl;
+  const questionEl = document.getElementById("question");
+  const answerButtons = document.querySelectorAll("#answers button");
+  const feedbackEl = document.getElementById("feedback");
+  const progressEl = document.getElementById("progress");
 
-const intro = document.getElementById("quiz-intro");
-const quiz = document.getElementById("quiz");
-const startBtn = document.getElementById("start-quiz");
+  const questions = [
+    {
+      question: "Riječ: glȃva",
+      correct: "dugosilazni"
+    },
+    {
+      question: "Riječ: vòda",
+      correct: "kratkouzlazni"
+    },
+    {
+      question: "Riječ: rȍditelj",
+      correct: "kratkosilazni"
+    }
+  ];
 
-quiz.style.display = "none";
+  let currentQuestion = 0;
+  let score = 0;
+  let canClick = true;
 
-function cacheElements() {
-  questionEl = document.getElementById("question");
-  feedbackEl = document.getElementById("feedback");
-  progressEl = document.getElementById("progress");
-}
-
-function attachAnswerHandlers() {
-  const buttons = document.querySelectorAll("#answers button");
-  buttons.forEach(button => {
-    button.addEventListener("click", handleAnswer);
+  intro.style.display = "block";
+  readyScreen.style.display = "none";
+  quiz.style.display = "none";
+  
+  startBtn.addEventListener("click", () => {
+    intro.style.display = "none";
+    readyScreen.style.display = "block";
   });
-}
+  
+  beginBtn.addEventListener("click", () => {
+    readyScreen.style.display = "none";
+    quiz.style.display = "block";
+    showQuestion();
+  });
 
-function showQuestion() {
-  const q = questions[currentQuestion];
-  questionEl.textContent = `Koji je naglasak u riječi: "${q.word}"?`;
-  feedbackEl.textContent = "";
-  feedbackEl.className = "";
-  progressEl.textContent = `Pitanje ${currentQuestion + 1} / ${questions.length}`;
-}
+  function showQuestion() {
+    canClick = true;
+    feedbackEl.textContent = "";
 
-function handleAnswer(event) {
-  const userAnswer = event.target.dataset.answer;
-  const correctAnswer = questions[currentQuestion].answer;
+    answerButtons.forEach(btn => {
+      btn.disabled = false;
+      btn.classList.remove("correct", "wrong");
+    });
 
-  if (userAnswer === correctAnswer) {
-    feedbackEl.textContent = "Točno!";
-    feedbackEl.className = "correct";
-    score++;
-  } else {
-    feedbackEl.textContent = `Netočno. Točan odgovor je: ${correctAnswer}`;
-    feedbackEl.className = "wrong";
+    questionEl.textContent = questions[currentQuestion].question;
+    progressEl.textContent = `Pitanje ${currentQuestion + 1} / ${questions.length}`;
   }
 
-  currentQuestion++;
+    answerButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      if (!canClick) return;
+      canClick = false;
 
-  setTimeout(() => {
-    if (currentQuestion < questions.length) {
-      showQuestion();
-    } else {
-      showResult();
-    }
-  }, 1200);
-}
+      const selected = button.dataset.answer;
+      const correct = questions[currentQuestion].correct;
 
-function showResult() {
-  quiz.innerHTML = `
-    <div class="result-box">
-      <h2>🎉 Kviz završen!</h2>
-      <p class="result-score">Točno: <strong>${score}</strong> / ${questions.length}</p>
-      <button id="retry">Pokušaj ponovno</button>
-    </div>
+      if (selected === correct) {
+        button.classList.add("correct");
+        feedbackEl.textContent = "✅ Točno!";
+        score++;
+      } else {
+        button.classList.add("wrong");
+        feedbackEl.textContent = `❌ Netočno — točan odgovor je: ${correct}`;
+      }
+
+      answerButtons.forEach(btn => btn.disabled = true);
+
+      setTimeout(() => {
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+          showQuestion();
+        } else {
+          showResult();
+        }
+      }, 1200);
+      });
+      });
+
+  function showResult() {
+  questionEl.textContent = "🎉 Kviz završen!";
+
+  const total = questions.length;
+  const percent = Math.round((score / total) * 100);
+
+  let message = "";
+  let emoji = "";
+
+  if (percent === 100) {
+    message = "Savršeno! Naglasci su ti jača strana 😎";
+    emoji = "🏆";
+  } else if (percent >= 70) {
+    message = "Odlično ti ide! Još malo i to je to! 👏";
+    emoji = "✨";
+  } else if (percent >= 40) {
+    message = "Dobro ti ide, ali trebaš još malo vježbe 🙂";
+    emoji = "🎧";
+  } else {
+    message = "Nema veze, svaki pokušaj je mali napredak 💪";
+    emoji = "📘";
+  }
+
+  feedbackEl.innerHTML = `
+    <span style="font-size: 2.5rem; display: block; margin-bottom: 12px;">
+      ${emoji}
+    </span>
+
+    <p style="margin-bottom: 8px;">
+      Osvojio/la si ${score} / ${total} boda.
+    </p>
+
+    <p>${message}</p>
   `;
 
-  document.getElementById("retry").addEventListener("click", restartQuiz);
+  progressEl.textContent = "";
+
+  const answers = document.getElementById("answers");
+
+  answers.style.display = "flex";
+  answers.style.justifyContent = "center";
+
+  answers.innerHTML = `
+  <button id="restart" style="width: 200px;">
+    Igraj ponovno 🔁
+  </button>
+  `;  
+
+  document.getElementById("restart").addEventListener("click", () => {
+    currentQuestion = 0;
+    score = 0;
+    location.reload();
+  });
 }
-
-function restartQuiz() {
-  currentQuestion = 0;
-  score = 0;
-
-  quiz.style.display = "none";
-  intro.style.display = "block";
-
-  quiz.innerHTML = `
-    <p id="question"></p>
-
-    <div id="answers">
-      <button data-answer="kratkosilazni">Kratkosilazni</button>
-      <button data-answer="kratkouzlazni">Kratkouzlazni</button>
-      <button data-answer="dugosilazni">Dugosilazni</button>
-      <button data-answer="dugouzlazni">Dugouzlazni</button>
-    </div>
-
-    <p id="feedback"></p>
-    <p id="progress"></p>
-  `;
-}
-
-startBtn.addEventListener("click", () => {
-  intro.style.display = "none";
-  quiz.style.display = "block";
-
-  cacheElements();
-  attachAnswerHandlers();
-  showQuestion();
-});
 
 });

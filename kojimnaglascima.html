@@ -55,15 +55,25 @@
 <main>
     
     <div class="quiz-wrapper">
+
    <div id="quiz-intro" class="quiz-intro">
   <h2 class="kviz">Pogodi naglasak</h2>
   <p>
     U ovom kratkom kvizu provjerit ćeš možeš li prepoznati
     hrvatske naglaske u riječima.
   </p>
-  <button id="start-quiz">Pokreni kviz</button>
+
+  <button id="start-quiz">Započni</button>
    </div>
-   </div>
+
+  <div id="quiz-ready" class="quiz-intro" style="display:none;">
+    <h2>🎧 Jeste li spremni?</h2>
+    <p>
+      Čekaju te <strong>3 pitanja</strong>.  
+      Klikni kada si spreman/na!
+    </p>
+    <button id="begin-quiz">Krenimo!</button>
+  </div>
 
     <div id="quiz">
     <p id="question"></p>
@@ -79,6 +89,7 @@
     <p id="progress"></p>
     </div>
     </div>
+
 
     <div></div>
 </main>
