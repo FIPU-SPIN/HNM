@@ -202,6 +202,11 @@ main{
     text-decoration: underline;
 }
 
+.breadcrumbs .current {
+    font-weight: bold;
+    color: #000;
+}
+
 .breadcrumbs span {
     margin: 0 5px;
 }
@@ -367,6 +372,8 @@ main{
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .burger span {
@@ -374,6 +381,20 @@ main{
     height: 3px;
     background-color: #000;
     display: block;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 1400px) {
@@ -394,28 +415,60 @@ main{
         order: 1;
     }
 
+    .main-nav {
+        position: relative;
+        z-index: 10;
+    }
+
     .main-nav ul {
-        display: none;
+        display: flex;
         width: 100%;
         order: 3;
         flex-direction: column;
         background: #fff;
-        padding: 10px 0;
+        padding: 15px 0;
         margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        opacity:0;
+        transform: translateY(-10px);
+        transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
     }
 
     .main-nav ul.active {
         display: flex;
+        max-height: 1000px;
+        transform: translateY(0);
+        opacity: 1;
     }
+
+    .nav-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 5;
+}
+
+.nav-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+}
+
+body.menu-open {
+        overflow: hidden;
+}
 }
 
 .tri-okvira {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
 }
 
 .okvir {

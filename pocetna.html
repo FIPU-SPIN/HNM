@@ -39,7 +39,7 @@
             <li><a href="glagoli.html">Glagoli u mreži</a></li>
         </ul>
 
-        <div class="burger">
+        <div class="burger" aria-label="navigacija" aria-expanded="false" role="button" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
@@ -48,10 +48,8 @@
 
 </nav>
 
-<nav class="breadcrumbs">
-    <a href="pocetna.html">Početna</a>
-    <span>/</span>
-    <span></span> </nav>
+<div class="nav-overlay"></div>
+
 
 <main>
     <div class="iznadslika"></div>
@@ -70,9 +68,6 @@
     </div>
 
 </main>
-
-    <script src="script.js"></script>
-
 
 <footer class="footer">
     <div class="footersadrzaj">
@@ -97,11 +92,4 @@
 
 </html>
 
-<script>
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.main-nav ul');
-
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-});
-</script>
+<script src="script.js" defer></script>

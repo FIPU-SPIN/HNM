@@ -1,4 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.main-nav ul');
+  const overlay = document.querySelector('.nav-overlay');
+
+  burger.addEventListener('click', () => {
+    const isOpen = burger.classList.contains('active');
+    isOpen ? closeMenu() : openMenu();
+});
+
+burger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        burger.click();
+    };
+});
+
+overlay.addEventListener('click', closeMenu);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && burger.classList.contains('active')) {
+        closeMenu();
+    };
+});
+
+function openMenu() {
+    burger.classList.add('active');
+    nav.classList.add('active');
+    overlay.classList.add('active');
+
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+}
+
+function closeMenu() {
+    burger.classList.remove('active');
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+};
+
+// Breadcrumbs
+
+    const breadcrumbs = document.getElementById("breadcrumbs");
+    if (breadcrumbs) {
+
+    const path = window.location.pathname.split("/").pop() || "index.html";
+    const pageName = getPageName(path);
+
+    let trail = JSON.parse(sessionStorage.getItem("breadcrumbTrail")) || [];
+
+    const existingIndex = trail.findIndex(p => p.path === path);
+    
+    if (pageName === "Početna") {
+    trail = [{ name: "Početna", path }];
+  } else if (existingIndex !== -1) {
+    trail = trail.slice(0, existingIndex + 1);
+  } else {
+    trail.push({ name: pageName, path });
+  }
+
+
+    sessionStorage.setItem("breadcrumbTrail", JSON.stringify(trail));
+
+    breadcrumbs.innerHTML = trail.map((item, i) => {
+      if (i === trail.length - 1) {
+      return `<span class="current">${item.name}</span>`;
+    } else {
+      return `<a href="${item.path}">${item.name}</a>`;
+    }
+  }).join(" / ");
+
+ 
+  function getPageName(file) {
+    if (file === "pocetna.html" || file === "index.html") return "Početna";
+      return file.replace(".html", "").replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+  }
+
+// Kviz
+
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
 
   const intro = document.getElementById("quiz-intro");
   const readyScreen = document.getElementById("quiz-ready");
