@@ -190,16 +190,23 @@ main{
     font-size: 16px;
     color: #555;
     border-bottom: #f2f2f2 2px solid;
+    display: flex;
+    gap: 8px;
 }
 
 .breadcrumbs a {
     text-decoration: none;
-    color: #000000;
+    color: #999;
     font-weight: 600;
 }
 
 .breadcrumbs a:hover {
     text-decoration: underline;
+}
+
+.breadcrumbs span:last-child {
+    color: #000;          
+    font-weight: 600;
 }
 
 .breadcrumbs .current {
