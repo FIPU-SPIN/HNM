@@ -48,7 +48,7 @@ function closeMenu() {
     if (breadcrumbs) {
 
     const path = window.location.pathname.split("/").pop() || "index.html";
-    const pageName = getPageName(path);
+    const pageName = document.title;
 
     let trail = JSON.parse(sessionStorage.getItem("breadcrumbTrail")) || [];
 

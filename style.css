@@ -37,7 +37,7 @@ main{
     font-size: 20px;
     background: linear-gradient(
         to bottom,
-        #d3b4e2,
+        #877391,
         #d9bce7a8
     );
 }
@@ -46,8 +46,8 @@ main{
     font-size: 20px;
     background: linear-gradient(
         to bottom,
-        #fbc5bc,
-        #fbc5bc9f
+        #bd968f,
+        #b18a839f
     );
 }
 
@@ -56,7 +56,7 @@ main{
     flex-direction:column;
     align-items: stretch;
     font-size: 20px;
-    background:#cec4c4;
+    background: #b2a2b9;
 }
 
 .bodyoprojektu{
@@ -187,7 +187,7 @@ main{
 .breadcrumbs {
     background-color: #f2f2f2;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     color: #555;
     border-bottom: #f2f2f2 2px solid;
     display: flex;
@@ -634,7 +634,7 @@ body.menu-open {
   font-size: 15px;  
   border-radius: 14px;
   border: none;
-  background-color: #00949b;
+  background-color: #000000;
   color: white;
   cursor: pointer;
   display: inline-block; 
@@ -643,7 +643,7 @@ body.menu-open {
 }
 
 #start-quiz:hover {
-  background-color: #00949b;
+  background-color: #afa3b4;
 }
 
 #retry {
@@ -652,14 +652,14 @@ body.menu-open {
   font-size: 1rem;
   border-radius: 14px;
   border: none;
-  background-color: #00949b;
+  background-color: #877391;
   color: white;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.2s;
 }
 
 #retry:hover {
-  background-color: #00949b;
+  background-color: #b2a2b9;
   transform: scale(1.05);
 }
 
@@ -719,8 +719,8 @@ button {
     font-size: 0.95rem;
     border-radius: 14px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    border: none;
-    background: #f9f9f9;
+    border: 0.5px ;
+    background: #d6d0da;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
 }
@@ -765,6 +765,7 @@ button {
   margin-top: 18px;
   font-size: 0.9rem;
   color: #666;
+  font-weight: bold;
 }
 
 #quiz-ready h2 {
